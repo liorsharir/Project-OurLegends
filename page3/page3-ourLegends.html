@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Our Legends</title>
+  <link rel="stylesheet" type="text/css" href="page3-ourLegends.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body dir="rtl">
+  <img src="../images/OurLegendsLogo.png" id="logo">
+    <header id="newPageHeader">
+      <h1 id="addPageTitle">הוספת עמוד חדש</h1>
+      <img src="../images/addPage.png"; id="addPageImg">
+    </header>
+  </div>
+
+  <div>
+    <form action="page3-ourLegends.php" method="post">
+      <div>
+        <label class="lbl">שם פרטי <input class="txt" type="text" name="firstName" placeholder="[כתוב את תשובתך כאן]"> </label>
+      </div>
+      <div>
+        <label class="lbl">שם משפחה<input class="txt" type="text" name="lastName" placeholder="[כתוב את תשובתך כאן]" ></label>
+      </div>
+      <div>
+        <label class="lbl">תאריך לידה<input class="txt" type="date" name="birthDate" placeholder="[dd/mm/yyyy]" required pattern="\d{4}-\d{2}-\d{2}"></label>
+      </div>
+      <div> 
+        <label class="lbl">תאריך פטירה<input class="txt" type="date" name="deathDate" placeholder="[כתוב את תשובתך כאן]"></label>
+      </div>
+      <div>
+        <label class="lbl">מקום קבורה<input class="txt" type="text" id="burialPlace" name="burialPlace" placeholder="[כתוב את תשובתך כאן]"></label>
+      </div>
+      <fieldset><legend>סיפור חיים</legend>
+        <div>
+          <label class="lbl"><textarea name="lifeStory" rows="10" cols="50" placeholder="[כתוב את תשובתך כאן]"></textarea></label>
+        </div>
+      </fieldset>
+      <div>
+        <label class="lbl">הוספת תמונה<input class="txt" type="file" name="photo" accept="image" rows="10" cols="50" ></textarea></label>
+      </div>
+      <div class="button">
+        <input type="submit" value="יצירת עמוד">
+      </div>
+      </form>
+  </div>
+
+  <footer>
+    <div>
+      צור קשר
+    </div>
+  </footer>
+</body>
+	
