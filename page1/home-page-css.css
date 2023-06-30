@@ -2,12 +2,10 @@
     box-sizing: border-box;
     font-family: 'Poppins'
 }
-
 a {
     color: black;
     text-decoration: unset;
 }
-
 #logo{
     display: block;
     margin: auto;
@@ -31,6 +29,9 @@ h1 {
     text-align: center;
     padding: 60px;
     font-family: cursive;
+}
+html, body {
+    height: 100%;
 }
 body {
     background-image: url('images/background.jpg');
@@ -56,8 +57,6 @@ body {
 .legend:hover {
     transform: scale(1.1);
 }
-
-
 .legend img {
     width: 200px;
     height: 200px;
@@ -71,10 +70,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;  
 }
-                                                 /* CSS */
 .button {
      background-color: #324f65;
      border-radius: 8px;
