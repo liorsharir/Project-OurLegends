@@ -1,34 +1,105 @@
-document.getElementById('addPhotoButton').addEventListener('click', function() {
-    document.getElementById('uploadForm').style.display = 'block';
+// ************** ADD PHOTO **************
+var addPhotoButton = document.getElementById('addPhotoButton');
+var imageForm = document.getElementById('uploadForm');
+var imageInput = document.getElementById('imageInput');
+var imageList = document.getElementById('gallery-images');
+
+addPhotoButton.addEventListener('click', function() {
+    imageForm.style.display = 'block';
+    addPhotoButton.style.display = 'none';
 });
 
-document.getElementById('uploadForm').addEventListener('submit', function(e) {
+document.getElementById('cancelPhoto').addEventListener('click', function(e) {
+    imageForm.style.display = 'none';
+    addPhotoButton.style.display = 'block';
+});
+
+imageForm.addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent form submission
-    var file = document.getElementById('photoInput').files[0];
+    var file = imageInput.files[0];
+
     if (file) {
         var reader = new FileReader();
         reader.onload = function(e) {
-            var image = new Image();
-            image.src = e.target.result;
-            image.onload = function() {
-                // Do something with the image, such as displaying it on the page
-                var targetElement = document.getElementById('imageContainer');
-                targetElement.src = image.src
-                targetElement.classList.add('img-item');
-            };
+            var imageSrc = e.target.result;
+
+            // Create an image element
+            var imageElement = document.createElement('img');
+            imageElement.src = imageSrc;
+            imageElement.classList.add('img-item')
+
+            // Append the image to the image gallery
+            imageList.appendChild(imageElement);
+
+            // Reset the form values
+            imageInput.value = '';
         };
         reader.readAsDataURL(file);
     }
-    document.getElementById('uploadForm').style.display = 'none'; // Hide the form after submission
+    // Hide the form after submission
+    imageForm.style.display = 'none';
+    addPhotoButton.style.display = 'block';
 });
 
+// ************** ADD VIDEO **************
+var addVideoButton = document.getElementById('addVideoButton');
+var videoForm = document.getElementById('videoForm');
+var videoInput = document.getElementById('videoInput');
+var videoList = document.getElementById('videoList');
+
+addVideoButton.addEventListener('click', function() {
+    videoForm.style.display = 'block';
+    addVideoButton.style.display = 'none';
+});
+
+document.getElementById('cancelVideo').addEventListener('click', function(e) {
+    videoForm.style.display = 'none';
+    addVideoButton.style.display = 'block';
+});
+
+videoForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+    var file = videoInput.files[0];
+
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var videoSrc = e.target.result;
+
+            // Create a video element
+            var videoElement = document.createElement('video');
+            videoElement.src = videoSrc;
+            videoElement.controls = true;
+            videoElement.classList.add('video-item')
+
+            // Append the video element to the video div
+            videoList.appendChild(videoElement);
+
+            // Reset the form values
+            videoInput.value = '';
+        };
+        reader.readAsDataURL(file);
+    }
+    // Hide the form after submission
+    videoForm.style.display = 'none';
+    addVideoButton.style.display = 'block';
+});
+
+// ************** ADD STORY **************
+var addStoryButton = document.getElementById('addStoryButton');
 var storyForm = document.getElementById('storyForm');
 var titleInput = document.getElementById('titleInput');
 var storyInput = document.getElementById('storyInput');
-var storyList = document.getElementById('storyList');
+var storyList = document.getElementById('all-stories');
 
-document.getElementById('addStoryButton').addEventListener('click', function() {
+addStoryButton.addEventListener('click', function() {
     storyForm.style.display = 'block';
+    addStoryButton.style.display = 'none';
+});
+
+document.getElementById('cancelStory').addEventListener('click', function(e) {
+    storyForm.style.display = 'none';
+    addStoryButton.style.display = 'block';
 });
 
 storyForm.addEventListener('submit', function(e) {
@@ -62,5 +133,6 @@ storyForm.addEventListener('submit', function(e) {
 
         // Hide the form after submission
         storyForm.style.display = 'none';
+        addStoryButton.style.display = 'block';
     }
 });

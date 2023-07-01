@@ -34,6 +34,11 @@ section {
     border-radius: 15px;
     margin: 1vh;
 }
+.video-item {
+    width: 29%;
+    border-radius: 15px;
+    margin: 1vh;
+}
 .all-stories {
     width: 100%;
     display: flex;
