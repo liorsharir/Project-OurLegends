@@ -1,0 +1,17 @@
+#messageInput {
+    width: 300px;
+}
+#messageList {
+    margin-top: 20px;
+}
+.message {
+    margin-bottom: 20px;
+}
+.message .date {
+    font-size: 14px;
+    color: gray;
+    width: 100%;
+}
+.message .content {
+    margin-top: 5px;
+}
