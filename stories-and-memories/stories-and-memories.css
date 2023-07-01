@@ -28,7 +28,7 @@ section {
     flex-wrap: wrap;
 }
 .img-item {
-    width: 31%;
+    width: 30%;
     border-radius: 15px;
     margin: 1vh;
 }
@@ -77,4 +77,8 @@ button {
 }
 #storyForm {
     display: none;
+}
+.warning {
+    color: red;
+    font-size: small;
 }

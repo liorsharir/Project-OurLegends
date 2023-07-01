@@ -5,7 +5,7 @@
     <title>Messages and Updates</title>
     <link rel="stylesheet" type="text/css" href="messages-and-updates.css">
     <link rel="stylesheet" type="text/css" href="../stories-and-memories/stories-and-memories.css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -30,10 +30,52 @@
 
         <section>
             <h1>הודעות ועידכונים</h1>
-            <div id="messageList"></div>
+            <div id="messageList" class="list">
+                <div class="message">
+                    <div class="date">7/1/2023, 4:37:42 PM</div>
+                    <div class="content">האזכרה תתקים בתאריך 20.8.2023</div>
+            </div>
+            </div>
             <div>
                 <input type="text" id="messageInput" placeholder="כתוב הודעה או עידכון...">
                 <button id="addMessageButton">הוסף עידכון</button>
+                <p class="warning" id="warningMessage" style="display: none">לאחר שתעלה את הדף מחדש השינויים לא ישמרו</p>
+            </div>
+        </section>
+
+        <section>
+            <h1>אירועים לזכרו</h1>
+            <div id="eventList" class="list">
+                <div class="event">
+                    <div class="date">7/1/2023, 4:46:51 PM</div>
+                    <div class="content">לזכר אור אשכר הי"ד: מרוץ ראשל"צ יצא לדרך בדקת דומייה <br>
+                        5,000 רצים משתתפים במרוץ ראשון לציון שיצא הבוקר (שישי) לדרך, ראש העירייה רז קינסטליך פתח את מקצה ה-10 ק״מ בדקת דומייה לזכר אור אשכר ז״ל שנרצח בפיגוע הירי בדיזנגוף לפני שבועיים והיה איש ברזל וסמל לספורט ולריצה.</div>
+                    <img class="image" src="../images/orRace.jpeg">
+                </div>
+            </div>
+            <div>
+                <input type="text" id="eventInput" placeholder="פרטי האירוע..."><br><br>
+                <input type="file" id="eventImageInput" accept="image/*"><br><br>
+                <button id="addEventButton">הוסף אירוע</button>
+                <p class="warning" id="warningEvent" style="display: none">לאחר שתעלה את הדף מחדש השינויים לא ישמרו</p>
+            </div>
+        </section>
+
+        <section>
+            <h1>הנצחה</h1>
+            <div id="placeList" class="list">
+                <div class="place">
+                    <div class="location">רחוב דיזינגוף</div>
+                    <div class="name">הנצחה ליד מיקום הפיגוע שבו נרצח אור, הנצחה זו נוצרה על ידי חברים, משפחה ואזרחים שעוברים</div>
+                    <img class="image" src="../images/orPlace.jpeg">
+                </div>
+            </div>
+            <div>
+                <input type="text" id="placeInput" placeholder="פרטי מקום הנצחה..."><br><br>
+                <input type="text" id="locationInput" placeholder="מיקום..."><br><br>
+                <input type="file" id="placeImageInput" accept="image/*"><br><br>
+                <button id="addPlaceButton">הוסף</button>
+                <p class="warning" id="warningPlace" style="display: none">לאחר שתעלה את הדף מחדש השינויים לא ישמרו</p>
             </div>
         </section>
     </main>
