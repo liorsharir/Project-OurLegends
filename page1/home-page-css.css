@@ -38,13 +38,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .legend {
     padding: 4px;
     text-align: center;
@@ -53,7 +51,6 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: transform 0.2s;
 }
-
 .legend:hover {
     transform: scale(1.1);
 }
@@ -83,6 +80,7 @@ body {
      text-align: center;
      vertical-align: baseline;
      transition: transform 0.1s;
+    margin-top: 40px;
 }
 
 .button:hover {

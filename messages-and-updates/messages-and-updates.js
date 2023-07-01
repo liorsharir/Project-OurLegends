@@ -78,5 +78,5 @@ $(document).ready(function() {
 
 $(function() {
     // Load the header content into the designated container
-    $("#headerContainer").load("../header.html");
+    $("#headerContainer").load("../personal-page-basic/header.html");
 });
