@@ -5,25 +5,38 @@
     font-family: 'Open Sans Hebrew Condensed', serif;
 }
 
+
 #logo{
     display: block;
     width: 20%;
+}
+
+.pageHeader{
+    margin:auto;
 }
 
 body {
     background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-div{
-   margin-bottom: 10%; 
-   overflow: auto;
+main{
+    background-color: whitesmoke;
+    width: 35%;
+    padding: 3%;
+    border-radius: 1%;
+    align-items: center;
+    margin: auto;
 }
+
+div{
+   margin-bottom: 5%; 
+}
+
 #addPageImg{
     width: 10%;
     height: 10%;
@@ -33,46 +46,99 @@ div{
 #newPageHeader{
     margin-top: 2%;
     margin-bottom: 3%;
+    margin-right: 5%;
     display: flex;
     align-items: center;
     padding: 10px;
 }
-fieldset{
-    margin-bottom: 10%;
-}
+
 .lbl{
-    width: 100%;
-    float: left;
+    width: 30%;
     display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
 }
 .txt{
-    float: left;
     width: 60%;
-    background-color: #dadada;
-    margin-right: 10%;
+    padding: 1%;
+    background-color: whitesmoke;
     text-align: center;
 }
 .button {
     background-color: #324f65;
     border-radius: 8px;
-    border: none;
-    font-size: 14px;
-    line-height: 20px;
     padding: 8px 12px;
     text-align: center;
     vertical-align: baseline;
     transition: transform 0.1s;
-    margin-top: 25px;
 }
-.button:hover {
+.button input[type="submit"] {
+    background-color: #324f65;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.button input[type="submit"]:hover ,.button:hover{
    transform: scale(1.05);
    background-color: steelblue;
 }
+
+#pop-div{
+    margin: auto;
+    margin-top: 1%;
+    direction: rtl;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#lifeStory {
+    width: 90%;
+    resize: vertical;
+    margin: 3%;
+    padding: 2%;
+}
+
+#profile{
+    width: 20%;
+    height: 20%;
+}
+
+.auto{
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2%;
+}
+@media (min-width: 768px) {
+    textarea {
+        min-height: 150px;
+    }
+}
+
+@media (min-width: 992px) {
+    textarea {
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    textarea {
+        min-height: 250px;
+    }
+
+}
+
 
 footer {
     background-color: lightgray;
     width: 100%;
     padding: 20px;
+    margin-top: 10%;
+    position:relative;
 }
 
 .footer-menu ul {
@@ -93,8 +159,14 @@ footer {
     font-weight: bold;
 }
 .footer-info {
-    margin-bottom: 3%;
     float: left;
-    direction: ltr;
+    position: absolute;
+    left: 1%;
+    top: 1%;
 }
-
+.footer-logo{
+    float: right;
+    width: 10%;
+    top: 1%;
+    position: absolute;
+}

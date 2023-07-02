@@ -5,69 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Our Legends</title>
   <link rel="stylesheet" type="text/css" href="page3-ourLegends.css">
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css' rel='stylesheet'>
-
+  <link href="../footer/footer.css" rel="stylesheet">
 
 </head>
 
 <body dir="rtl">
+
   <img src="../images/OurLegendsLogo.png" id="logo">
     <header id="newPageHeader">
       <h1 id="addPageTitle">הוספת עמוד חדש</h1>
       <img src="../images/addPage.png"; id="addPageImg">
     </header>
-  </div>
-
-  <div>
+  
+  <main class="form-div">
     <form action="page3-ourLegends.php" method="post">
       <div>
-        <label class="lbl">שם פרטי <input class="txt" type="text" name="firstName" placeholder="[כתוב את תשובתך כאן]"> </label>
+        <label for="firstName" class="lbl" >שם פרטי</label>
+        <input class="txt" type="text" name="firstName" placeholder="[כתוב את תשובתך כאן]">
       </div>
       <div>
-        <label class="lbl">שם משפחה<input class="txt" type="text" name="lastName" placeholder="[כתוב את תשובתך כאן]" ></label>
+        <label for="lastName" class="lbl" >שם משפחה</label>
+        <input class="txt" type="text" name="lastName" placeholder="[כתוב את תשובתך כאן]" >
       </div>
       <div>
-        <label class="lbl">תאריך לידה<input class="txt" type="date" name="birthDate" placeholder="[dd/mm/yyyy]" required pattern="\d{4}-\d{2}-\d{2}"></label>
+        <label for="birthDate" class="lbl"> תאריך לידה</label>
+        <input class="txt" type="date" name="birthDate" placeholder="[dd/mm/yyyy]" required pattern="\d{4}-\d{2}-\d{2}">
       </div>
       <div> 
-        <label class="lbl">תאריך פטירה<input class="txt" type="date" name="deathDate" placeholder="[כתוב את תשובתך כאן]"></label>
+        <label for="deathDate" class="lbl"> תאריך פטירה</label>
+        <input class="txt" type="date" name="deathDate" placeholder="[כתוב את תשובתך כאן]">
       </div>
       <div>
-        <label class="lbl">מקום קבורה<input class="txt" type="text" id="burialPlace" name="burialPlace" placeholder="[כתוב את תשובתך כאן]"></label>
+        <label for="burialPlace" class="lbl"> מקום קבורה</label>
+        <input class="txt" type="text" id="burialPlace" name="burialPlace" placeholder="[..נא ציין עיר, בית עלמין, מספר חלקה/קבר]">
       </div>
-      <fieldset><legend>סיפור חיים</legend>
-        <div>
-          <label class="lbl"><textarea name="lifeStory" rows="10" cols="50" placeholder="[כתוב את תשובתך כאן]"></textarea></label>
-        </div>
-      </fieldset>
+
       <div>
-        <label class="lbl">הוספת תמונה</label>
-        <input class="txt" type="file" name="photo" accept="image" rows="10" cols="50" ></textarea>
-        <img class="profile" src="../images/profile.webp" height="115" width="115">
+        <label for="lifeStory" class="lbl">סיפור חיים</label>
+        <textarea id="lifeStory" name="lifeStory" placeholder=" שתף כאן את סיפור החיים של יקירך..."></textarea>
       </div>
+
+      <div>
+        <div class="auto"><label for="chooseImg">הוספת תמונה</label></div>
+        <div class="auto"><input name="chooseImg" type="file" name="photo" accept="image" ></div>
+        <div class="auto"><img id="profile" src="../images/profile.webp"></div>
+      </div>
+
       <div class="button">
         <input type="submit" value="יצירת עמוד">
       </div>
       </form>
-  </div>
-
-
-    
+    </main>
 
   <footer>
     <nav class="footer-menu">
       <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="javascript:footerBox('contact')">צור קשר</a></li>
+          <li><a href="javascript:footerBox('about')">אודות</a></li>
+          <li><a href="javascript:footerBox('privacy')">מדיניות פרטיות</a></li>
+          <li><a href="javascript:footerBox('accessibility')">הצהרת נגישות</a></li>
       </ul>
   </nav>
-  <div class="footer-info">
-    <p >Copyright © 2023 Our Legends Inc. All Rights Reserved</p>
-    <p>Contact: legends@gmail.com | Phone: 123-456-7890</p>
-</div>   
+  <div id="pop-div"></div>
+  <p class="footer-info">כל הזכויות שמורות © 2023 - Our Legends</p>
+  <img src="../images/OurLegendsLogo.png" class="footer-logo">
 </footer>
+
+<script>
+
+  var box= document.getElementById("pop-div");
+  var nav = document.querySelector(".footer-menu");
+  activeBox = box;
+
+  document.addEventListener("click", function(event) {
+      var isNavClicked = nav.contains(event.target);
+      if (!isNavClicked && box.contains(activeBox)) {
+        // Clicked outside the navigation and the active box, remove it
+        box.innerHTML='';
+      }
+    });
+  
+  function footerBox(type){
+    box.innerHTML='';
+    if(type == 'contact'){
+      box.innerHTML="<p>המייל שלנו: ourLegends@gmail.com </p>"; } 
+    else if(type == 'about'){
+      box.innerHTML="<p>אתם עומדים בפיתחו של אתר הנצחה מיוחד. אתר שהוקם לכבודם של יקרינו, שכל אחד מהם הוא כמו אגדה, שלעולם לא מתה...<br>"
+        +"אנחנו, צוות האתר מבטיחים לתת את מלוא תשובת הלב לבקושתכם בכדי שנוכל לספק לכל אחד ואחת מכם את השירות הטוב ביותר. </p>";
+    }
+    else if(type == 'privacy'){
+      box.innerHTML="<p>&#x2022 כבוד הפרטיות ושמירה על מידע הלקוחות הם עקרונות המדיניות שלנו <br> "
+      + "&#x2022 אנו אוספים, מעבדים ושומרים מידע אישי בהתאם לדרישות החוק והתקנות הרלוונטיות. <br> "
+      + "&#x2022 אנו לא מספקים מידע אישי לצדדים שלישיים ללא הסכמת הלקוחות, למעט חובות משפטיות או בקשות קשורות לשירותים שלנו.<br>"
+      + "&#x2022 אנו מגנים על המידע האישי של לקוחותינו באמצעות אבטחה ופתרונות מתאימים.<br> "
+      + "&#x2022 אנו עוקבים אחרי רגולציות הפרטיות ומתעדכנים כדי להבטיח תאימות למדיניות הרלוונטית.<br>"
+      + "&#x2022 אנו מאפשרים ללקוחות לשלוט ולעדכן את המידע האישי שלהם. </p>"
+      }
+    else if(type=='accessibility'){
+      box.innerHTML="<p>אנו מתחייבים לספק שירותים ותוכן ברמת נגישות מיטבית לכלל המשתמשים. <br>"
+      +"אנו מבצעים כל הצעדים הנדרשים כדי להבטיח שהאתר/המוצר שלנו יהיו נגישים לאנשים עם מגבלות פיזיות, תפקודיות או חשיבה. <br>"
+      +"אנו עוקבים אחרי התקנים והמדיניות הרלוונטיים לנגישות ומשפרים את חוויית המשתמש כדי להבטיח שכולם יכולים ליהנות משירותינו. <br>"
+      +"אנו מזמינים את קהל המשתמשים להציע משוב והערות לנושאי נגישות כדי שנוכל להמשיך לשפר את עבודתנו. </p>"
+    }
+    
+
+  }
+  
+</script>
 </body>
-	
+</html>
