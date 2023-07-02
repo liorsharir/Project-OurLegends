@@ -65,3 +65,43 @@ section {
     justify-content: space-between;
     width: 50%;
 }
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #main-gallery {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    #logo{
+        height: 100px;
+    }
+}
