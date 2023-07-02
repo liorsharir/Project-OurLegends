@@ -27,3 +27,15 @@ input[type="text"] {
     font-size: 14px;
     color: gray;
 }
+.img-main {
+    width: 80%;
+    height: 80%;
+}
+.main-content {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+#main-gallery{
+    width: 20%;
+}
