@@ -3,8 +3,9 @@ footer {
     background-color: lightgray;
     width: 100%;
     padding: 20px;
+    bottom: 0;
+    position: fixed;
     margin-top: 10%;
-    position:relative;
 }
 
 .footer-menu ul {
@@ -34,4 +35,13 @@ footer {
     width: 10%;
     top: 1%;
     position: absolute;
+}
+
+#pop-div{
+    margin: auto;
+    margin-top: 1%;
+    direction: rtl;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
