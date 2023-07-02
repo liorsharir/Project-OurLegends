@@ -31,6 +31,7 @@ main{
     border-radius: 1%;
     align-items: center;
     margin: auto;
+    margin-bottom: 15%;
 }
 
 div{
@@ -86,15 +87,6 @@ div{
    background-color: steelblue;
 }
 
-#pop-div{
-    margin: auto;
-    margin-top: 1%;
-    direction: rtl;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
 #lifeStory {
     width: 90%;
     resize: vertical;
@@ -132,7 +124,7 @@ div{
 
 }
 
-
+/*
 footer {
     background-color: lightgray;
     width: 100%;
@@ -169,4 +161,4 @@ footer {
     width: 10%;
     top: 1%;
     position: absolute;
-}
+} */
