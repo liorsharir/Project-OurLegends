@@ -40,3 +40,8 @@ input[type="text"] {
 #main-gallery{
     width: 20%;
 }
+@media screen and (max-width: 768px) {
+    #main-gallery {
+        width: 70%;
+    }
+}
