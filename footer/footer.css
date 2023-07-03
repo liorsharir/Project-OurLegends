@@ -1,18 +1,21 @@
+footer * {
+    display: inline-block;
+}
 
 footer {
-    background-color: lightgray;
+    background-color: whitesmoke;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
+    overflow: auto;
+    text-align: center;
+    margin-top:7%;
     bottom: 0;
-    position: fixed;
-    margin-top: 10%;
+    
 }
 
 .footer-menu ul {
     list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    margin: auto;
 }
 
 .footer-menu li {
@@ -27,22 +30,16 @@ footer {
 }
 .footer-info {
     float: left;
-    position: absolute;
-    left: 1%;
-    top: 1%;
 }
 .footer-logo{
     float: right;
     width: 10%;
-    top: 1%;
-    position: absolute;
+    bottom: 0;
 }
 
 #pop-div{
     margin: auto;
-    margin-top: 1%;
+    margin-top: 2%;
     direction: rtl;
     text-align: center;
-    display: flex;
-    justify-content: center;
 }

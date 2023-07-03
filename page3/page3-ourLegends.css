@@ -8,6 +8,7 @@
 #logo{
     width: 100%;
 }
+
 #homePageLink{
     display: block;
     width: 20%;
@@ -25,11 +26,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 main{
     background-color: whitesmoke;
-    width: 35%;
+    width: 40%;
     padding: 3%;
     border-radius: 1%;
     align-items: center;
@@ -61,6 +63,7 @@ div{
     display: inline-block;
     font-weight: bold;
     font-size: 18px;
+    vertical-align: top;
 }
 .txt{
     width: 60%;
@@ -90,16 +93,19 @@ div{
    background-color: steelblue;
 }
 
-#lifeStory {
+.lifeStory {
     width: 90%;
     resize: vertical;
     margin: 3%;
     padding: 2%;
 }
 
-#profile{
+.profile{
     width: 20%;
-    height: 20%;
+}
+
+.burial-img{
+    width: 50%;
 }
 
 .auto{
@@ -108,13 +114,27 @@ div{
     text-align: center;
     margin-bottom: 2%;
 }
-@media (min-width: 768px) {
+.burial-img-box{
+    width: 30%;
+    display: inline-block;
+    float: rigth;
+    margin-right: 3%;
+}
+.burialGallery{
+    overflow: auto;
+}
+
+.burial-img #profile{
+    width: 100%;
+}
+
+@media (min-width: 700px) {
     textarea {
         min-height: 150px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 900px) {
     textarea {
         min-height: 200px;
     }
@@ -126,3 +146,5 @@ div{
     }
 
 }
+
+

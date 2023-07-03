@@ -1,3 +1,4 @@
+// Save local changes to local storage, prevent data lost while refresh\reload page.
 window.onload = function(){
     var firstName = localStorage.getItem('firstName');
     var lastName = localStorage.getItem('lastName');
@@ -22,6 +23,8 @@ window.onbeforeunload = function() {
     localStorage.setItem("profile", $('#profile').val());
 }
 
-function homePage(){
-    
-}
+// Replace img icon with uploaded picture
+function loadFile(event, img) {
+	var img = document.getElementById(img);
+	img.src = URL.createObjectURL(event.target.files[0]);
+};

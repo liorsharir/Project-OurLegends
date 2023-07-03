@@ -1,3 +1,12 @@
+// Add footer element
+  $(document).ready(function(){
+  $(function() {
+      // Load the footer content into the designated container
+      $("#footerContainer").load("../footer/footer.html");
+  });
+});
+
+
   var box= document.getElementById("pop-div");
   var nav = document.querySelector(".footer-menu");
   activeBox = box;
@@ -8,7 +17,7 @@
         // Clicked outside the navigation and the active box, remove it
         box.innerHTML='';
       }
-    });
+  });
   
   function footerBox(type){
     box.innerHTML='';
@@ -37,6 +46,4 @@
       +"אנו מזמינים את קהל המשתמשים להציע משוב והערות לנושאי נגישות כדי שנוכל להמשיך לשפר את עבודתנו. </p>"
       box.innerHTML=value;
     }
-    
-
   }
