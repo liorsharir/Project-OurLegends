@@ -11,8 +11,7 @@
 </head>
 
 <body dir="rtl">
-
-  <img src="../images/OurLegendsLogo.png" id="logo">
+  <a href="../page1/home-page.html" id="homePageLink"><img src="../images/OurLegendsLogo.png" id="logo"></a>
     <header id="newPageHeader">
       <h1 id="addPageTitle">הוספת עמוד חדש</h1>
       <img src="../images/addPage.png"; id="addPageImg">
@@ -22,19 +21,19 @@
     <form action="page3-ourLegends.php" method="post">
       <div>
         <label for="firstName" class="lbl" >שם פרטי</label>
-        <input class="txt" type="text" name="firstName" placeholder="[כתוב את תשובתך כאן]">
+        <input class="txt" type="text" id="firstName" name="firstName" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
       </div>
       <div>
         <label for="lastName" class="lbl" >שם משפחה</label>
-        <input class="txt" type="text" name="lastName" placeholder="[כתוב את תשובתך כאן]" >
+        <input class="txt" type="text" id="lastName" name="lastName" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
       </div>
       <div>
         <label for="birthDate" class="lbl"> תאריך לידה</label>
-        <input class="txt" type="date" name="birthDate" placeholder="[dd/mm/yyyy]" required pattern="\d{4}-\d{2}-\d{2}">
+        <input class="txt" type="date" id="birthDate" name="birthDate" max="9999-12-31" placeholder="[dd-mm-yyyy]" required pattern="\d{2}-\d{2}-\d{4}">
       </div>
       <div> 
         <label for="deathDate" class="lbl"> תאריך פטירה</label>
-        <input class="txt" type="date" name="deathDate" placeholder="[כתוב את תשובתך כאן]">
+        <input class="txt" type="date" id="deathDate" name="deathDate" max="9999-12-31" required required pattern="\d{2}-\d{2}-\d{4}">
       </div>
       <div>
         <label for="burialPlace" class="lbl"> מקום קבורה</label>
@@ -48,7 +47,7 @@
 
       <div>
         <div class="auto"><label for="chooseImg">הוספת תמונה</label></div>
-        <div class="auto"><input name="chooseImg" type="file" name="photo" accept="image" ></div>
+        <div class="auto"><input name="chooseImg" type="file" name="photo" accept="image/*,.pdf" ></div>
         <div class="auto"><img id="profile" src="../images/profile.webp"></div>
       </div>
 
@@ -71,7 +70,10 @@
   <p class="footer-info">כל הזכויות שמורות © 2023 - Our Legends</p>
   <img src="../images/OurLegendsLogo.png" class="footer-logo">
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
 <script src="../footer/footer.js" type="text/javascript"></script>
+<script src="page3-ourLegends.js" type="text/javascript"></script>
+
 
 </body>
 </html>

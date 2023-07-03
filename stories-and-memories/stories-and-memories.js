@@ -136,7 +136,9 @@ storyForm.addEventListener('submit', function(e) {
         addStoryButton.style.display = 'block';
     }
 });
-$(function() {
-    // Load the header content into the designated container
-    $("#headerContainer").load("../personal-page-basic/header.html");
+$(document).ready(function(){
+    $(function() {
+        // Load the header content into the designated container
+        $("#headerContainer").load("../personal-page-basic/header.html");
+    });
 });

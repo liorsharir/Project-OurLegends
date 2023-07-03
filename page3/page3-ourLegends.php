@@ -1,6 +1,7 @@
 <?php
 
-    $server_name = "localhost";
+    //$server_name = "localhost";
+    $server_name = "asafjonathonop.mtacloud.co.il";
     $user_name = "asafjona_legend";
     $password = "123456";
     $database_name = "asafjona_our_legends";
@@ -24,7 +25,7 @@
     $photo = $_POST["photo"];
     
     $sql = "INSERT INTO legends (firstName, lastName, birthDate, deathDate, burialPlace, lifeStory, photo ) 
-                    VALUES ('$firstName', '$lastName', '$birthDate', '$deathDate', '$burialPlace', '$lifeStory', '$photo')";
+            VALUES ('$firstName', '$lastName', '$birthDate', '$deathDate', '$burialPlace', '$lifeStory', '$photo')";
     if ($conn->query($sql)==FALSE){
         echo "Can not add new legend. Error is: ".$conn->error;
         exit();
@@ -32,6 +33,5 @@
     
     // Close the database connection
     $conn->close();
-
 
 ?>

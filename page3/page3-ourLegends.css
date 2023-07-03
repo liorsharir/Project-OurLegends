@@ -5,8 +5,10 @@
     font-family: 'Open Sans Hebrew Condensed', serif;
 }
 
-
 #logo{
+    width: 100%;
+}
+#homePageLink{
     display: block;
     width: 20%;
 }
@@ -18,6 +20,7 @@
 body {
     background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -123,42 +126,3 @@ div{
     }
 
 }
-
-/*
-footer {
-    background-color: lightgray;
-    width: 100%;
-    padding: 20px;
-    margin-top: 10%;
-    position:relative;
-}
-
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-menu li {
-    margin: 0 10px;
-}
-
-.footer-menu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-}
-.footer-info {
-    float: left;
-    position: absolute;
-    left: 1%;
-    top: 1%;
-}
-.footer-logo{
-    float: right;
-    width: 10%;
-    top: 1%;
-    position: absolute;
-} */
