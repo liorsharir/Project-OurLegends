@@ -80,3 +80,10 @@ $(function() {
     // Load the header content into the designated container
     $("#headerContainer").load("../personal-page-basic/header.html");
 });
+
+const eventList = document.getElementById('eventList1');
+eventList.addEventListener('click', (event) => {
+    const selectedEventId = event.target.getAttribute('data-event-id');
+    localStorage.setItem('selectedEventId', selectedEventId);
+    window.location.href = 'details.html'; // Redirect to the details page
+});
