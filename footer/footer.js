@@ -6,20 +6,23 @@
   });
 });
 
-  var box= document.getElementById("pop-div");
-  var nav = document.querySelector(".footer-menu");
-  activeBox = box;
 
-  document.addEventListener("click", function(event) {
-      var isNavClicked = nav.contains(event.target);
-      if (!isNavClicked && box.contains(activeBox)) {
-        // Clicked outside the navigation and the active box, remove it
-        box.innerHTML='';
-      }
-  });
+// Function that hide the details
+$(document).click(function(event) {
+  var target = $(event.target);
+  var nav = $('.footer-menu'); 
+  var elementToHide = $('#pop-menu'); 
+
+  if (!nav.is(target) && !nav.has(target).length) {
+    elementToHide.html('');
+  }
+});
+
   
   function footerBox(type){
+    var box= document.getElementById("pop-menu");
     box.innerHTML='';
+    // $("#pop-menue").innerHTML='';
     if(type == 'contact'){
       content= "<p>המייל שלנו: ourLegends@gmail.com </p>";
       box.innerHTML=content;
