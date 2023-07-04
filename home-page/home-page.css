@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins'
+}
+a {
+    color: black;
+    text-decoration: unset;
+}
+#logo{
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+#discription{
+    font-family: 'Courier New', Courier, monospace;
+}
+#search {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px auto;
+    display: block;
+    font-size: 18px;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+    padding: 60px;
+    font-family: cursive;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.legend {
+    padding: 4px;
+    text-align: center;
+    margin: 36px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 0.2s;
+}
+.legend:hover {
+    transform: scale(1.1);
+}
+.legend img {
+    width: 200px;
+    height: 200px;
+}
+.legend h2 {
+    font-size: 24px;
+    margin: 0;
+}
+.boardOfLegend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    white-space: nowrap;  
+}
+.button {
+     background-color: #324f65;
+     border-radius: 8px;
+     color: white;
+     font-size: 14px;
+     line-height: 20px;
+     padding: 10px 12px;
+     text-align: center;
+     vertical-align: baseline;
+     transition: transform 0.1s;
+    margin-top: 40px;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+footer {
+    position: absolute;
+}

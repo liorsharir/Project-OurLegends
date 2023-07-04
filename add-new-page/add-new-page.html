@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Legends</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="add-new-page.css">
+  <link href='https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css' rel='stylesheet'>
+  <link href="../footer/footer.css" type="text/css" rel="stylesheet">
+</head>
+
+<body dir="rtl">
+    <a href="../page1/home-page.html" id="homePageLink"><img src="../images/OurLegendsLogo.png" id="logo"></a>
+    <header id="newPageHeader">
+      <h1 id="addPageTitle">הוספת עמוד חדש</h1>
+      <img src="../images/addPage.png"; id="addPageImg">
+    </header>
+  
+    <main class="form-div">
+      <form name="legendsForm" action="add-new-page.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+        <div>
+          <label for="firstName" class="lbl" >שם פרטי</label>
+          <input class="txt" type="text" id="firstName" name="firstName" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
+        </div>
+        <div>
+          <label for="lastName" class="lbl" >שם משפחה</label>
+          <input class="txt" type="text" id="lastName" name="lastName" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
+        </div>
+        <div>
+          <label for="birthDate" class="lbl"> תאריך לידה</label>
+          <input class="txt" type="date" id="birthDate" name="birthDate" max="9999-12-31" placeholder="[dd-mm-yyyy]" required pattern="\d{2}-\d{2}-\d{4}" required>
+        </div>
+        <div> 
+          <label for="deathDate" class="lbl"> תאריך פטירה</label>
+          <input class="txt" type="date" id="deathDate" name="deathDate" max="9999-12-31" required pattern="\d{2}-\d{2}-\d{4}" required>
+        </div>
+        <div>
+          <label for="summary" class="lbl">תקציר</label>
+          <textarea rows="10" class="txt" id="summary" name="summary" placeholder="[כתוב סיפור חיים מקוצר בכמה שורות]"></textarea>
+        </div>
+        <div>
+          <label for="burialPlace" class="lbl"> מקום קבורה</label>
+          <input class="txt" type="text" id="burialPlace" name="burialPlace" placeholder="[נא ציין עיר, בית עלמין, מספר חלקה/קבר]">
+        </div>
+        
+        <section class="burialGallery">
+          <h1 class="lbl">תמונות קבורה</h1><br><br>
+          <div class="auto burial-img-box burial1box">
+            <div ><label for="burial1">מפת החלקה </label></div>
+            <div><input name="burial1" type="file" accept="image/*,.pdf" onchange="loadFile(event,'burial1')"></div>
+            <div><img class="burial-img" id="burial1" src="../images/img-icon.jpeg"></div>
+          </div>
+          <div class="auto burial-img-box burial2box">
+            <div><label for="burial2"> מפה מפורטת </label></div>
+            <div><input name="burial2" type="file" accept="image/*,.pdf" onchange="loadFile(event,'burial2')"></div>
+            <div><img class="burial-img" id="burial2" src="../images/img-icon.jpeg"></div>
+          </div>
+          <div class="auto burial-img-box burial3box">
+            <div><label for="burial3"> תמונת הקבר</label></div>
+            <div><input name="burial3" type="file" accept="image/*,.pdf" onchange="loadFile(event,'burial3'); validateImage(this)"; ></div>
+            <div ><img class="burial-img" id="burial3" src="../images/img-icon.jpeg"></div>
+          </div>
+        
+        </section>
+
+        <div>
+          <label for="lifeStory" class="lbl">סיפור חיים</label>
+          <textarea rows="20" class="lifeStory" name="lifeStory" placeholder=" שתף כאן את סיפור החיים של יקירך..."></textarea>
+        </div>
+
+        <div class="auto">
+          <div><label for="photo">הוספת תמונה</label></div>
+          <div><input type="file" name="photo" accept="image/*,.pdf" onchange="loadFile(event,'profile')" ></div>
+          <div><img class="profile" id="profile" src="../images/profile.webp"></div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="יצירת עמוד">
+        </div>
+      </form>
+    </main>
+
+  <footer id="footerContainer"></footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../footer/footer.js" type="text/javascript"></script>
+  <script src="add-new-page.js" type="text/javascript"></script>
+
+
+</body>
+</html>
