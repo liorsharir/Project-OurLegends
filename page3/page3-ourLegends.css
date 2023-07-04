@@ -31,7 +31,7 @@ body {
 
 main{
     background-color: whitesmoke;
-    width: 40%;
+    width: 45%;
     padding: 3%;
     border-radius: 1%;
     align-items: center;
@@ -115,10 +115,10 @@ div{
     margin-bottom: 2%;
 }
 .burial-img-box{
-    width: 30%;
+    width: 27%;
     display: inline-block;
     float: rigth;
-    margin-right: 3%;
+    margin-right: 4%;
 }
 .burialGallery{
     overflow: auto;
@@ -128,23 +128,32 @@ div{
     width: 100%;
 }
 
-@media (min-width: 700px) {
-    textarea {
-        min-height: 150px;
+@media screen and (max-width: 768px) {
+    #addPageTitle {
+        font-size: 20px;
+    }
+    .burial-img-box{
+        display: block;
+        width:50%;
+        margin: auto;
+    }
+    main{
+        width: 90%;
     }
 }
 
-@media (min-width: 900px) {
-    textarea {
-        min-height: 200px;
-    }
-}
+@media screen and (max-width: 992px) {
 
-@media (min-width: 1200px) {
-    textarea {
-        min-height: 250px;
+    main{
+        width: 90%;
     }
 
 }
+@media screen and (max-width: 1250px) {
+    main{
+        width: 80%;
+    }
+}
+
 
 

@@ -43,3 +43,20 @@ footer {
     direction: rtl;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    nav.footer-menu {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .footer-menu li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu ul li {
+        margin: 10px 0;
+    }
+}

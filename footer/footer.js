@@ -6,7 +6,6 @@
   });
 });
 
-
   var box= document.getElementById("pop-div");
   var nav = document.querySelector(".footer-menu");
   activeBox = box;
