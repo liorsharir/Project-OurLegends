@@ -51,7 +51,7 @@ function validateImage(fileInput){
     var maxSizeInBytes = 16777215; // 16.7 MB
 
     if (file.size > maxSizeInBytes) {
-      window.alert("File size exceeds the maximum allowed limit (1 MB). Please choose a smaller image.");
+      window.alert("File size exceeds the maximum allowed limit (16.7 MB). Please choose a smaller image.");
       fileInput.value = ''; // Clear the file input field
       return false;
     }
