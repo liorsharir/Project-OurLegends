@@ -93,6 +93,19 @@ div{
    background-color: steelblue;
 }
 
+.button input[type="button"] {
+    background-color: #324f65;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.button input[type="button"]:hover ,.button:hover{
+   transform: scale(1.05);
+   background-color: steelblue;
+}
 .lifeStory {
     width: 90%;
     resize: vertical;
