@@ -63,5 +63,5 @@ function validateImage(fileInput){
 // Redirect to the main page after submit
 document.getElementById("subButton").addEventListener("click", myFunction);  
 function myFunction() {  
-    window.location.href="../home-page/home-page.html";  
+    window.location.href="../personal-memorial-page/personal-memorial-page.html";  
 }
