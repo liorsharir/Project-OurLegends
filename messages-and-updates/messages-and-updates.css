@@ -51,7 +51,7 @@ input[type="text"] {
 }
 
 
-#eventList1 button{
+#eventList1 li{
     background-color: #324f65;
     border-radius: 8px;
     color: white;
@@ -65,7 +65,7 @@ input[type="text"] {
     margin: 4px;
 }
 
-#eventList1 button:hover {
+#eventList1 li:hover {
     transform: scale(1.05);
 }
 
