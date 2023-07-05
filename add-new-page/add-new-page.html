@@ -20,11 +20,11 @@
       <form name="legendsForm" action="add-new-page.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
         <div>
           <label for="firstName" class="lbl">שם פרטי</label>
-          <input class="txt" type="text" id="firstName" name="firstName" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
+          <input class="txt" type="text" id="firstName" name="firstName" maxlength="32" pattern="[a-z\u0590-\u05fe]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
         </div>
         <div>
           <label for="lastName" class="lbl">שם משפחה</label>
-          <input class="txt" type="text" id="lastName" name="lastName" maxlength="32" pattern="[A-Za-z]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
+          <input class="txt" type="text" id="lastName" name="lastName" maxlength="32" pattern="[a-z\u0590-\u05fe]{1,32}" placeholder="[כתוב את תשובתך כאן]" required>
         </div>
         <div>
           <label for="birthDate" class="lbl"> תאריך לידה</label>
