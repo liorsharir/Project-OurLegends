@@ -29,6 +29,7 @@ function loadFile(event, img) {
 	img.src = URL.createObjectURL(event.target.files[0]);
 };
 
+// Validate dates that not in the future
 function validateForm(){
     var birthDate = document.forms["legendsForm"]["birthDate"].value;
     var currentDate= new Date();
@@ -46,6 +47,7 @@ function validateForm(){
     return true;
 }
 
+// Validate that image size not excceed the limit
 function validateImage(fileInput){
     var file = fileInput.files[0];
     var maxSizeInBytes = 16777215; // 16.7 MB
@@ -56,4 +58,10 @@ function validateImage(fileInput){
       return false;
     }
     return true;
+}
+
+// Redirect to the main page after submit
+document.getElementById("subButton").addEventListener("click", myFunction);  
+function myFunction() {  
+    window.location.href="../home-page/home-page.html";  
 }
