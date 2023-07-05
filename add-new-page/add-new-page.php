@@ -38,4 +38,7 @@
     // Close the database connection
     $conn->close();
 
+    header('Location: ../personal-memorial-page/personal-memorial-page.html');
+    exit();
+
 ?>
