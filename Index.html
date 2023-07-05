@@ -48,10 +48,21 @@
         <a href="Includes/add-new-page.html" class="button">יצירת דף הנצחה חדש</a>
     </main>
 
-    <footer id="footerContainer"></footer>
+    <footer id="footerContainer">
+        <p class="footer-info">כל הזכויות שמורות © 2023 - Our Legends</p>
+        <img src="images/OurLegendsLogo.png" class="footer-logo">
+        <nav class="footer-menu">
+        <ul>
+            <li><a onclick="javascript:footerBox('contact')">צור קשר</a></li>
+            <li><a href="javascript:footerBox('about')">אודות</a></li>
+            <li><a href="javascript:footerBox('privacy')">מדיניות פרטיות</a></li>
+            <li><a href="javascript:footerBox('accessibility')">הצהרת נגישות</a></li>
+            <br><p id="pop-menu"></p>
+        </ul>
+        </nav>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="JS/footer.js" type="text/javascript"></script>
     <script src="JS/home-page.js" type="text/javascript"></script>
 
 
