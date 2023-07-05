@@ -40,6 +40,39 @@ input[type="text"] {
 #main-gallery{
     width: 20%;
 }
+
+#eventList1{
+    display: flex;
+    justify-content: center;
+    background-color: 324f65;
+    padding: 10px 0;
+    list-style: none;
+
+}
+
+
+#eventList1 button{
+    background-color: #324f65;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 12px;
+    text-align: center;
+    vertical-align: baseline;
+    transition: transform 0.1s;
+    margin-top: 40px;
+    margin: 4px;
+}
+
+#eventList1 button:hover {
+    transform: scale(1.05);
+}
+
+#eventsTitle{
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     #main-gallery {
         width: 70%;

@@ -59,9 +59,3 @@ function validateImage(fileInput){
     }
     return true;
 }
-
-// Redirect to the main page after submit
-document.getElementById("subButton").addEventListener("click", myFunction);  
-function myFunction() {  
-    window.location.href="../home-page/home-page.html";  
-}
