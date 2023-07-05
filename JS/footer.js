@@ -2,7 +2,7 @@
 $(document).ready(function(){
   $(function() {
       // Load the footer content into the designated container
-      $("#footerContainer").load("../footer/footer.html");
+      $("#footerContainer").load("../Includes/footer.html");
   });
 });
 
