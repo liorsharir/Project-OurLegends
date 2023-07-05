@@ -80,15 +80,8 @@ float: right;}
 }
 
 /* Media queries */
-@media screen and (max-width: 1197px) {
-    .imgBottom { 
-        width: 205.333px;
-        height: 205.333px;
-    }
-}
 
-
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1300px) {
     #p1Top {
         width: 100%;
     }
@@ -109,6 +102,13 @@ float: right;}
     #p2Top {width: 100%;}
     .sideborder{border-bottom:solid 1px black;
     border-left:none;}
+}
+
+@media screen and (max-width: 1197px) {
+    .imgBottom {
+        width: 205.333px;
+        height: 205.333px;
+    }
 }
 
 @media screen and (max-width: 1060px) {
