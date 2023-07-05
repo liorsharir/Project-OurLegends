@@ -85,7 +85,6 @@ body {
      vertical-align: baseline;
      transition: transform 0.1s;
      margin-top: 40px;
-     font-family: 'Open Sans Hebrew Condensed', serif; 
 }
 
 .button:hover {
