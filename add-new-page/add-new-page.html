@@ -47,12 +47,12 @@
           <h1 class="lbl">תמונות קבורה</h1><br><br>
           <div class="auto burial-img-box burial1box">
             <div ><label for="burial1">מפת החלקה </label></div>
-            <div><input name="burial1" type="file" accept="image/*,.pdf" onchange="loadFile(event,'burial1')"></div>
+            <div><input name="burial1" type="file" accept="image/*,.pdf" onchange="loadFile(event,'burial1'); validateImage(this)"></div>
             <div><img class="burial-img" id="burial1" src="../images/img-icon.jpeg"></div>
           </div>
           <div class="auto burial-img-box burial2box">
             <div><label for="burial2"> מפה מפורטת </label></div>
-            <div><input name="burial2" type="file" accept="image/*,.pdf" onchange="loadFile(event,'burial2')"></div>
+            <div><input name="burial2" type="file" accept="image/*,.pdf" onchange="loadFile(event,'burial2'); validateImage(this)"></div>
             <div><img class="burial-img" id="burial2" src="../images/img-icon.jpeg"></div>
           </div>
           <div class="auto burial-img-box burial3box">
@@ -70,7 +70,7 @@
 
         <div class="auto">
           <div><label for="photo">הוספת תמונה</label></div>
-          <div><input type="file" name="photo" accept="image/*,.pdf" onchange="loadFile(event,'profile')" ></div>
+          <div><input type="file" name="photo" accept="image/*,.pdf" onchange="loadFile(event,'profile'); validateImage(this)" ></div>
           <div><img class="profile" id="profile" src="../images/profile.webp"></div>
         </div>
 

@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    font-family: 'Poppins'
 }
 a {
     color: black;
@@ -14,6 +13,8 @@ a {
 
 #discription{
     font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Open Sans Hebrew Condensed', serif; */
+
 }
 #search {
     width: 50%;
@@ -23,6 +24,7 @@ a {
     margin: 20px auto;
     display: block;
     font-size: 18px;
+    font-family: 'Poppins'
 }
 h1 {
     margin: 0;
@@ -51,6 +53,7 @@ body {
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: transform 0.2s;
+
 }
 .legend:hover {
     transform: scale(1.1);
@@ -81,7 +84,8 @@ body {
      text-align: center;
      vertical-align: baseline;
      transition: transform 0.1s;
-    margin-top: 40px;
+     margin-top: 40px;
+     font-family: 'Open Sans Hebrew Condensed', serif; 
 }
 
 .button:hover {
